@@ -1,0 +1,48 @@
+/* styles.css */
+body {
+    padding-top: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    border-radius: 0;
+}
+
+.container {
+    max-width: 900px;
+}
+
+.page-title {
+    margin-bottom: 20px;
+}
+
+.btn-sm {
+    margin-right: 5px;
+}
+
+.table th,
+.table td {
+    vertical-align: middle;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.btn-action {
+    font-size: 14px;
+    padding: 6px 10px;
+}
+
+.btn-action .icon {
+    margin-right: 5px;
+}
+
+.back-link {
+    font-size: 14px;
+}
+
+.alert-message {
+    font-size: 14px;
+    margin-top: 10px;
+}

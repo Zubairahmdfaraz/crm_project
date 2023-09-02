@@ -1,0 +1,15 @@
+{% extends 'crm_app/base.html' %}
+
+{% block title %}Delete Customer{% endblock %}
+
+{% block content %}
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1>Delete Customer</h1>
+        <a href="{% url 'customer_list' %}" class="btn btn-secondary">Cancel</a>
+    </div>
+    <p>Are you sure you want to delete {{ customer.first_name }} {{ customer.last_name }}?</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger">Yes, Delete</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends 'crm_app/base.html' %}
+
+{% block title %}Customer List{% endblock %}
+
+{% block content %}
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1>Customer List</h1>
+        <a href="{% url 'customer_add' %}" class="btn btn-success">Add Customer</a>
+    </div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Address</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for customer in customers %}
+                <tr>
+                    <td>{{ customer.first_name }}</td>
+                    <td>{{ customer.last_name }}</td>
+                    <td>{{ customer.email }}</td>
+                    <td>{{ customer.phone }}</td>
+                    <td>{{ customer.address }}</td>
+                    <td>
+                        <a href="{% url 'customer_edit' customer.pk %}" class="btn btn-primary btn-sm">Edit</a>
+                        <a href="{% url 'customer_delete' customer.pk %}" class="btn btn-danger btn-sm">Delete</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
